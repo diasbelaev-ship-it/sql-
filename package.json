@@ -12,6 +12,7 @@
     "test": "tsx --test tests/*.test.ts",
     "db:setup": "node scripts/local-db.mjs setup",
     "db:stop": "node scripts/local-db.mjs stop",
+    "db:migrate": "node scripts/migrate-hosted-db.mjs",
     "lint": "eslint src tests",
     "test:api": "node scripts/verify-web.mjs",
     "test:assistant": "node --env-file=.env.local node_modules/tsx/dist/cli.mjs scripts/verify-assistant.ts",
