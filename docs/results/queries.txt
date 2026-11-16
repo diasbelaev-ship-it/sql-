@@ -1,0 +1,242 @@
+SET
+           name            |             address             | price_kzt 
+---------------------------+---------------------------------+-----------
+ Ant Gym                   | улица Едила Ергожина, 4/3       |     12000
+ Invictus GO Arena         | микрорайон Гажайып, 11/1 блок 6 |     12000
+ King Fitness              | микрорайон Шугыла               |     12000
+ Titan Arms                | улица Жунисова, 2/23к7          |     12000
+ ТехноGym тренажерный зал  | проспект Райымбека, 221ж        |     12000
+ Тренажерный зал “AQONGYM” | микрорайон Жетысу-2, 11/1       |     12000
+ Baqgym                    | улица Яссауи, 66                |     12500
+ BOSS FITNESS              | 13-й Военный городок, 21Б       |     12500
+ Invictus GO Abay          | проспект Абая, 165              |     12500
+ Invictus GO Askarova      | улица Аскарова, 4/3             |     12500
+(10 rows)
+
+           name            | price_band | price_kzt |  price_basis   
+---------------------------+------------+-----------+----------------
+ Aquastars на Яссауи       | premium    |     52000 | model_estimate
+ Urban Gym                 | premium    |     49000 | model_estimate
+ Invictus Girls Crystal    | premium    |     49000 | model_estimate
+ Continental swimming club | premium    |     46000 | model_estimate
+ Aquastars на Навои        | premium    |     43000 | model_estimate
+ QFitness                  | premium    |     43000 | model_estimate
+ Velvet Sport Villa        | premium    |     40000 | model_estimate
+ Erbil Grand Hotel         | premium    |     40000 | model_estimate
+ Invictus Fitness Gagarin  | premium    |     40000 | model_estimate
+ Фитнес-клуб "Тастак"      | standard   |     31000 | published
+(10 rows)
+
+           gym           |     full_name     |       specialty        
+-------------------------+-------------------+------------------------
+ Gym Point               | Учебный тренер 01 | Функциональный тренинг
+ ProGym                  | Учебный тренер 02 | Силовой тренинг
+ FitnessBlitz            | Учебный тренер 03 | Функциональный тренинг
+ AYUMAN WORKOUT          | Учебный тренер 04 | Силовой тренинг
+ Velvet Sport Villa      | Учебный тренер 05 | Функциональный тренинг
+ Aquastars на Навои      | Учебный тренер 06 | Силовой тренинг
+ Underground big на Абая | Учебный тренер 07 | Функциональный тренинг
+ ADRENALINE на Райымбека | Учебный тренер 08 | Силовой тренинг
+ Aquastars на Яссауи     | Учебный тренер 09 | Функциональный тренинг
+ Erbil Grand Hotel       | Учебный тренер 10 | Силовой тренинг
+(10 rows)
+
+        gym         |           title           | weekday | start_time |      trainer      
+--------------------+---------------------------+---------+------------+-------------------
+ Gym Point          | Силовая тренировка        |       1 | 18:00:00   | Учебный тренер 01
+ Gym Point          | Функциональная тренировка |       3 | 19:00:00   | Учебный тренер 01
+ ProGym             | Силовая тренировка        |       1 | 18:00:00   | Учебный тренер 02
+ ProGym             | Функциональная тренировка |       3 | 19:00:00   | Учебный тренер 02
+ FitnessBlitz       | Силовая тренировка        |       1 | 18:00:00   | Учебный тренер 03
+ FitnessBlitz       | Функциональная тренировка |       3 | 19:00:00   | Учебный тренер 03
+ AYUMAN WORKOUT     | Силовая тренировка        |       1 | 18:00:00   | Учебный тренер 04
+ AYUMAN WORKOUT     | Функциональная тренировка |       3 | 19:00:00   | Учебный тренер 04
+ Velvet Sport Villa | Силовая тренировка        |       1 | 18:00:00   | Учебный тренер 05
+ Velvet Sport Villa | Функциональная тренировка |       3 | 19:00:00   | Учебный тренер 05
+(10 rows)
+
+     full_name      | segment |      gym       | price_kzt | status 
+--------------------+---------+----------------+-----------+--------
+ Учебный клиент 001 | student | Gym Point      |     20000 | active
+ Учебный клиент 002 | adult   | Gym Point      |     25500 | active
+ Учебный клиент 003 | premium | Gym Point      |     38000 | active
+ Учебный клиент 004 | student | ProGym         |     21500 | active
+ Учебный клиент 005 | adult   | ProGym         |     27000 | active
+ Учебный клиент 006 | premium | ProGym         |     41000 | active
+ Учебный клиент 007 | student | FitnessBlitz   |     22500 | active
+ Учебный клиент 008 | adult   | FitnessBlitz   |     28500 | active
+ Учебный клиент 009 | premium | FitnessBlitz   |     43000 | active
+ Учебный клиент 010 | student | AYUMAN WORKOUT |     24000 | active
+(10 rows)
+
+     full_name      | method | amount_kzt | status 
+--------------------+--------+------------+--------
+ Учебный клиент 001 | card   |      20000 | paid
+ Учебный клиент 002 | cash   |      25500 | paid
+ Учебный клиент 003 | kaspi  |      38000 | paid
+ Учебный клиент 004 | card   |      21500 | paid
+ Учебный клиент 005 | cash   |      27000 | paid
+ Учебный клиент 006 | kaspi  |      41000 | paid
+ Учебный клиент 007 | card   |      22500 | paid
+ Учебный клиент 008 | cash   |      28500 | paid
+ Учебный клиент 009 | kaspi  |      43000 | paid
+ Учебный клиент 010 | card   |      24000 | paid
+(10 rows)
+
+          name           |     full_name      | rating | is_demo 
+-------------------------+--------------------+--------+---------
+ Gym Point               | Учебный клиент 002 |      4 | t
+ ProGym                  | Учебный клиент 005 |      5 | t
+ FitnessBlitz            | Учебный клиент 008 |      3 | t
+ AYUMAN WORKOUT          | Учебный клиент 011 |      4 | t
+ Velvet Sport Villa      | Учебный клиент 014 |      5 | t
+ Aquastars на Навои      | Учебный клиент 017 |      3 | t
+ Underground big на Абая | Учебный клиент 020 |      4 | t
+ ADRENALINE на Райымбека | Учебный клиент 023 |      5 | t
+ Aquastars на Яссауи     | Учебный клиент 026 |      3 | t
+ Erbil Grand Hotel       | Учебный клиент 029 |      4 | t
+(10 rows)
+
+     full_name      |        gym         |           title           | booked_for 
+--------------------+--------------------+---------------------------+------------
+ Учебный клиент 001 | Gym Point          | Силовая тренировка        | 2026-11-09
+ Учебный клиент 002 | Gym Point          | Функциональная тренировка | 2026-11-11
+ Учебный клиент 004 | ProGym             | Силовая тренировка        | 2026-11-09
+ Учебный клиент 005 | ProGym             | Функциональная тренировка | 2026-11-11
+ Учебный клиент 007 | FitnessBlitz       | Силовая тренировка        | 2026-11-09
+ Учебный клиент 008 | FitnessBlitz       | Функциональная тренировка | 2026-11-11
+ Учебный клиент 010 | AYUMAN WORKOUT     | Силовая тренировка        | 2026-11-09
+ Учебный клиент 011 | AYUMAN WORKOUT     | Функциональная тренировка | 2026-11-11
+ Учебный клиент 013 | Velvet Sport Villa | Силовая тренировка        | 2026-11-09
+ Учебный клиент 014 | Velvet Sport Villa | Функциональная тренировка | 2026-11-11
+(10 rows)
+
+ city_zone |           name            | amenity_code 
+-----------+---------------------------+--------------
+ center    | "Берлога" тренажерный зал | cardio
+ center    | 777 Fight Club & Gym      | cardio
+ center    | ADRENALINE на Арбате      | cardio
+ center    | ADRENALINE на Достык      | cardio
+ center    | ADRENALINE на Райымбека   | cardio
+ center    | Ant Gym                   | cardio
+ center    | Aquastars на Яссауи       | cardio
+ center    | Asyl Gym                  | cardio
+ center    | Baqgym                    | cardio
+ center    | BOSS FITNESS              | cardio
+(10 rows)
+
+ price_band | gyms | avg_adult_month_kzt 
+------------+------+---------------------
+ budget     |   22 |               16455
+ standard   |   39 |               27231
+ premium    |    9 |               44667
+(3 rows)
+
+ city_zone | payments | paid_kzt 
+-----------+----------+----------
+ center    |      108 |  3241500
+ south     |       42 |  1326500
+ north     |       33 |   857000
+ west      |       27 |   598500
+(4 rows)
+
+           name            | price_kzt 
+---------------------------+-----------
+ Aquastars на Яссауи       |     52000
+ Invictus Girls Crystal    |     49000
+ Urban Gym                 |     49000
+ Continental swimming club |     46000
+ QFitness                  |     43000
+ Aquastars на Навои        |     43000
+ Invictus Fitness Gagarin  |     40000
+ Erbil Grand Hotel         |     40000
+ Velvet Sport Villa        |     40000
+ Фитнес-клуб "Тастак"      |     31000
+(10 rows)
+
+           name           
+--------------------------
+ Фитнес-клуб "Тастак"
+ First Fitness Таугуль
+ Invictus GO Abay
+ Invictus GO Aport East
+ Invictus GO Aqsay
+ Invictus GO Arena
+ Invictus GO Askarova
+ Invictus GO Atakent
+ Invictus GO Baitursynov
+ Invictus Girls Crystal
+ Invictus GO Fifty Four
+ Invictus Fitness Gagarin
+(12 rows)
+
+     full_name      | segment 
+--------------------+---------
+ Учебный клиент 003 | premium
+ Учебный клиент 006 | premium
+ Учебный клиент 009 | premium
+ Учебный клиент 012 | premium
+ Учебный клиент 015 | premium
+ Учебный клиент 018 | premium
+ Учебный клиент 021 | premium
+ Учебный клиент 024 | premium
+ Учебный клиент 027 | premium
+ Учебный клиент 030 | premium
+(10 rows)
+
+           name            | city_zone | price_kzt 
+---------------------------+-----------+-----------
+ Aquastars на Яссауи       | center    |     52000
+ Invictus Girls Crystal    | south     |     49000
+ Urban Gym                 | center    |     49000
+ Continental swimming club | center    |     46000
+ Aquastars на Навои        | south     |     43000
+ QFitness                  | center    |     43000
+ Velvet Sport Villa        | south     |     40000
+ Erbil Grand Hotel         | center    |     40000
+ Invictus Fitness Gagarin  | south     |     40000
+ Фитнес-клуб "Тастак"      | center    |     31000
+(10 rows)
+
+           name            | payments | total_kzt 
+---------------------------+----------+-----------
+ Aquastars на Яссауи       |        3 |    171500
+ Invictus Girls Crystal    |        3 |    162000
+ Urban Gym                 |        3 |    162000
+ Continental swimming club |        3 |    151500
+ Aquastars на Навои        |        3 |    142000
+ QFitness                  |        3 |    142000
+ Velvet Sport Villa        |        3 |    132000
+ Invictus Fitness Gagarin  |        3 |    132000
+ Erbil Grand Hotel         |        3 |    132000
+ Фитнес-клуб "Тастак"      |        3 |    101500
+(10 rows)
+
+ gym_id |           name            | city_zone | price_band | student_month_kzt | adult_month_kzt | premium_month_kzt 
+--------+---------------------------+-----------+------------+-------------------+-----------------+-------------------
+     12 | King Fitness              | west      | budget     |             12000 |           15000 |             23000
+     36 | Titan Arms                | north     | budget     |             12000 |           15000 |             23000
+     40 | ТехноGym тренажерный зал  | center    | budget     |             12000 |           15000 |             23000
+     48 | Тренажерный зал “AQONGYM” | west      | budget     |             12000 |           15000 |             23000
+     56 | Ant Gym                   | center    | budget     |             12000 |           15000 |             23000
+     64 | Invictus GO Arena         | center    | budget     |             12000 |           15000 |             23000
+     25 | Baqgym                    | center    | budget     |             12500 |           16000 |             24000
+     53 | BOSS FITNESS              | center    | budget     |             12500 |           16000 |             24000
+     61 | Invictus GO Abay          | south     | budget     |             12500 |           16000 |             24000
+     65 | Invictus GO Askarova      | south     | budget     |             12500 |           16000 |             24000
+(10 rows)
+
+ city_zone | price_band | gym_count | avg_adult_month_kzt | avg_student_month_kzt 
+-----------+------------+-----------+---------------------+-----------------------
+ center    | budget     |         9 |               16222 |                 12778
+ center    | premium    |         5 |               46000 |                 36600
+ center    | standard   |        22 |               27591 |                 21886
+ north     | budget     |         4 |               17000 |                 13375
+ north     | standard   |         7 |               27429 |                 21786
+ south     | budget     |         4 |               16500 |                 13000
+ south     | premium    |         4 |               43000 |                 34250
+ south     | standard   |         6 |               27250 |                 21667
+ west      | budget     |         5 |               16400 |                 13000
+ west      | standard   |         4 |               24875 |                 19500
+(10 rows)
+

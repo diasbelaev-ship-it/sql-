@@ -1,0 +1,16 @@
+node_modules/
+.next/
+.env.local
+.env
+.env.*.local
+.local-db/
+.worktrees/
+.superpowers/
+.taste-skill/
+tsconfig.tsbuildinfo
+coverage/
+test-results/
+playwright-report/
+.ocr-tool/
+.gemini-key-ocr.png
+*.traineddata

@@ -1,0 +1,35 @@
+.assistant-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;padding-top:4px}
+.assistant-label{display:flex;gap:7px;align-items:center;font-size:12px;color:var(--green)}
+.assistant-heading h2{margin-top:9px;font-size:25px;line-height:1.3;max-width:440px}
+.assistant-reset{display:flex;gap:6px;align-items:center;white-space:nowrap;margin-top:3px}
+.assistant-description{color:var(--muted);font-size:12px;line-height:1.7;margin:6px 0 15px}
+.assistant-log{max-height:400px;min-height:170px;overscroll-behavior:contain;padding:12px 2px 16px}
+.assistant-message{margin-bottom:18px}
+.assistant-message.user{display:flex;justify-content:flex-end}
+.assistant-speaker{display:block;color:var(--green);font-size:10px;margin:0 0 7px 3px}
+.assistant-message .bubble{margin:0;max-width:95%;white-space:pre-wrap;overflow-wrap:anywhere}
+.assistant-message.user .bubble{max-width:88%}
+.assistant-action-list{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0}
+.assistant-action-list>span{display:flex;align-items:center;gap:5px;font-size:10px;color:var(--green);background:#edf4f1;border-radius:5px;padding:5px 7px}
+.assistant-gyms{margin:12px 0 0 0;border-top:1px solid var(--line)}
+.assistant-gym{display:flex;gap:11px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--line)}
+.assistant-gym-number{font-size:12px;color:var(--green);min-width:14px;padding-top:3px;font-variant-numeric:tabular-nums}
+.assistant-gym-info{flex:1;min-width:0}
+.assistant-gym-info>button{display:flex;align-items:center;gap:5px;border:0;padding:0;text-align:left;font-size:13px;font-weight:600;background:transparent}
+.assistant-gym-info>button svg{flex-shrink:0;color:var(--green)}
+.assistant-gym-info p{display:flex;align-items:center;gap:4px;font-size:11px;line-height:1.5;color:var(--muted);margin:5px 0}
+.assistant-gym-info p svg{flex-shrink:0}
+.assistant-gym-info>span{font-size:10px;color:var(--muted);font-variant-numeric:tabular-nums}
+.assistant-save{border:0;padding:5px;color:var(--green)}
+.assistant-working{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--green);margin:16px 0}
+.assistant-review{margin:16px 0;border:1px solid #bdcfc9;border-radius:9px;padding:17px;background:#fafcfb}
+.assistant-review h3{font-size:15px;margin:0 0 8px}
+.assistant-review-gym{font-size:12px;font-weight:600;margin:0 0 12px}
+.assistant-review blockquote{margin:0;padding:12px 0;border-top:1px solid #dce5e1;border-bottom:1px solid #dce5e1;font-size:13px;line-height:1.7;white-space:pre-wrap;overflow-wrap:anywhere}
+.assistant-review-note{font-size:11px;color:var(--muted);line-height:1.6}
+.assistant-review-actions{display:flex;gap:9px;margin-top:12px;flex-wrap:wrap}
+.assistant-review-actions button{font-size:12px;padding:9px 12px}
+.assistant-error{font-size:12px;line-height:1.6;padding:10px 0}
+.assistant-footnote{font-size:10px;color:var(--muted);line-height:1.7;margin:12px 0 0}
+.assistant-suggestions{margin-top:14px}
+@media(max-width:700px){.assistant-heading{display:block}.assistant-heading h2{font-size:22px;margin-bottom:7px}.assistant-reset{margin-top:0;margin-bottom:9px}.assistant-log{max-height:42vh;min-height:150px}.assistant-message .bubble{max-width:100%;font-size:12px;padding:12px}.assistant-gym-info>button{font-size:12px}.assistant-gym-info p{font-size:10px}.assistant-review{padding:13px}.assistant-review-actions{flex-direction:column}.assistant-review-actions button{width:100%}}

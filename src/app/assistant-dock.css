@@ -1,0 +1,4 @@
+.assistant-dock{position:fixed;right:24px;bottom:24px;width:570px;max-width:calc(100vw - 32px);max-height:calc(100vh - 48px);overflow:auto;padding:30px 24px 20px;background:white;border:1px solid #d5dedb;border-radius:16px;box-shadow:0 12px 55px #18352e2b;z-index:150}
+.assistant-provider-notice{background:#fff7e6;border-left:3px solid #b88b35;padding:10px 12px;font-size:12px;line-height:1.7;margin-bottom:15px}
+.assistant-dock .assistant-log{max-height:350px}
+@media(max-width:700px){.assistant-dock{right:8px;bottom:8px;max-width:calc(100vw - 16px);max-height:calc(100dvh - 16px);padding:28px 16px 16px}.assistant-dock .assistant-log{max-height:35dvh}.assistant-dock .assistant-heading h2{font-size:21px}}

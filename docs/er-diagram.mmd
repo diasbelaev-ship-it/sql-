@@ -1,0 +1,76 @@
+erDiagram
+    GYMS ||--o{ PLANS : offers
+    GYMS ||--o{ TRAINERS : employs_demo
+    GYMS ||--o{ CLASSES : hosts_demo
+    GYMS ||--o{ REVIEWS : receives_demo
+    GYMS ||--o{ GYM_AMENITIES : has_demo
+    TRAINERS ||--o{ CLASSES : leads_demo
+    CLIENTS ||--o{ MEMBERSHIPS : buys_demo
+    PLANS ||--o{ MEMBERSHIPS : selected_demo
+    MEMBERSHIPS ||--o{ PAYMENTS : paid_demo
+    CLIENTS ||--o{ REVIEWS : writes_demo
+    CLIENTS ||--o{ BOOKINGS : reserves_demo
+    CLASSES ||--o{ BOOKINGS : booked_demo
+
+    GYMS {
+      bigint id PK
+      text name
+      text address
+      numeric latitude
+      numeric longitude
+      text price_band
+      text source_url
+    }
+    PLANS {
+      bigint id PK
+      bigint gym_id FK
+      text audience
+      integer duration_days
+      integer price_kzt
+      text price_basis
+    }
+    CLIENTS {
+      bigint id PK
+      text full_name
+      text email
+      text segment
+    }
+    TRAINERS {
+      bigint id PK
+      bigint gym_id FK
+      text full_name
+    }
+    CLASSES {
+      bigint id PK
+      bigint gym_id FK
+      bigint trainer_id FK
+      smallint weekday
+    }
+    MEMBERSHIPS {
+      bigint id PK
+      bigint client_id FK
+      bigint plan_id FK
+      date starts_on
+      date ends_on
+    }
+    PAYMENTS {
+      bigint id PK
+      bigint membership_id FK
+      integer amount_kzt
+    }
+    REVIEWS {
+      bigint id PK
+      bigint client_id FK
+      bigint gym_id FK
+      smallint rating
+    }
+    BOOKINGS {
+      bigint id PK
+      bigint client_id FK
+      bigint class_id FK
+      date booked_for
+    }
+    GYM_AMENITIES {
+      bigint gym_id PK,FK
+      text amenity_code PK
+    }

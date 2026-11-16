@@ -1,0 +1,4 @@
+.toolbar .search input{border:0!important;box-shadow:none!important;margin:0!important;padding:13px 0!important;background:transparent!important}
+.toolbar .search:focus-within{outline:2px solid #1b6e66;outline-offset:2px}
+.toolbar .search input:focus{outline:none}
+fieldset>input[type=number]{margin-top:16px;font-variant-numeric:tabular-nums}

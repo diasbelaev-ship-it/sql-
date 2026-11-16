@@ -1,0 +1,10 @@
+\set ON_ERROR_STOP on
+BEGIN;
+\ir db/migrations/001_schema.sql
+\ir db/migrations/002_views_indexes.sql
+\ir db/seed/10_real_gyms.sql
+\ir db/seed/20_demo_activity.sql
+\ir db/migrations/005_subscription_terms.sql
+\ir db/migrations/006_verified_venues.sql
+\ir db/checks/verify.sql
+COMMIT;

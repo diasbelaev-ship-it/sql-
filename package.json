@@ -1,0 +1,49 @@
+{
+  "name": "gymfinder-almaty",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev -H 127.0.0.1",
+    "build": "next build",
+    "start": "next start -H 127.0.0.1",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "db:setup": "node scripts/local-db.mjs setup",
+    "db:stop": "node scripts/local-db.mjs stop",
+    "lint": "eslint src tests",
+    "test:api": "node scripts/verify-web.mjs",
+    "test:assistant": "node --env-file=.env.local node_modules/tsx/dist/cli.mjs scripts/verify-assistant.ts",
+    "test:review": "node --env-file=.env.local scripts/verify-review-confirmation.mjs",
+    "ai:check": "node --env-file=.env.local scripts/check-gemini.mjs",
+    "test:ai:live": "node scripts/verify-live-gemini.mjs",
+    "test:ai:actions": "node --env-file=.env.local scripts/verify-live-actions.mjs",
+    "test:terms": "node --env-file=.env.local node_modules/tsx/dist/cli.mjs scripts/verify-subscription-terms.ts",
+    "test:ai:terms": "node scripts/verify-live-subscriptions.mjs",
+    "site:start": "node scripts/start-site.mjs"
+  },
+  "dependencies": {
+    "@fontsource/manrope": "^5.3.0",
+    "@google/genai": "^3.0.0",
+    "bcryptjs": "^3.0.0",
+    "leaflet": "^1.9.4",
+    "lucide-react": "^0.468.0",
+    "next": "^16.0.0",
+    "pg": "^8.16.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "@types/leaflet": "^1.9.0",
+    "@types/node": "^24.0.0",
+    "@types/pg": "^8.15.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.4.5",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  }
+}
