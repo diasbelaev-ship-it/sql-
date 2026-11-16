@@ -7,17 +7,18 @@ import { pool } from '@/lib/db';
 import { filtersSchema } from '@/lib/filters';
 import { searchGyms } from '@/lib/search';
 import { chatService } from '@/lib/chat-service';
+import { getSiteOrigin,isSecureSiteOrigin } from '@/lib/runtime-origin';
 export const runtime='nodejs';
 const hash=(s:string)=>createHash('sha256').update(s).digest('hex');
 const limits=new Map<string,{n:number,until:number}>();
 async function user(){const jar=await cookies();const t=jar.get('gym_auth')?.value;if(!t)return null;const r=await pool.query('SELECT a.id::text,a.name,a.email FROM gym_web.sessions s JOIN gym_web.accounts a ON a.id=s.account_id WHERE s.token_hash=$1 AND s.expires_at>now()',[hash(t)]);return r.rows[0]??null;}
-const options={httpOnly:true,sameSite:'lax' as const,secure:process.env.APP_ORIGIN?.startsWith('https:')??false,path:'/'};
+const options={httpOnly:true,sameSite:'lax' as const,secure:isSecureSiteOrigin(),path:'/'};
 function ok(data:unknown,status=200){return NextResponse.json(data,{status});}
 async function handle(req:NextRequest,ctx:{params:Promise<{path:string[]}>}){
  try{
  const path=(await ctx.params).path.join('/'), method=req.method;
  if(method!=='GET'){
-   const origin=process.env.APP_ORIGIN??'http://127.0.0.1:3000';
+   const origin=getSiteOrigin();
    if(req.headers.get('origin')!==origin)return ok({error:'Недопустимый источник запроса'},403);
    if(Number(req.headers.get('content-length')??0)>16384)return ok({error:'Слишком большой запрос'},413);
    const key=(req.headers.get('x-forwarded-for')??'local')+path;
