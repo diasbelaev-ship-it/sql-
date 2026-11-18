@@ -7,6 +7,6 @@ import './globals.css';
 import './refinements.css';
 import './assistant.css';
 import './assistant-dock.css';
-import AsciiVignette from '@/components/AsciiVignette';
+import CosmicBackground from '@/components/CosmicBackground';
 export const metadata:Metadata={title:'GymFinder — залы Алматы',description:'Каталог залов Алматы, тарифы и карта.'};
-export default function Layout({children}:{children:React.ReactNode}){return <html lang="ru"><body><AsciiVignette/><div className="site-content">{children}</div></body></html>;}
+export default function Layout({children}:{children:React.ReactNode}){return <html lang="ru"><body><CosmicBackground/><div className="site-content">{children}</div></body></html>;}
