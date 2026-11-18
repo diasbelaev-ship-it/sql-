@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 Jay Sharma
+Copyright (c) 2026 AideaThoughts
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -20,5 +20,5 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-Upstream component: https://21st.dev/@radiumcoders/components/shader-metal
-Current source: https://github.com/radiumcoders/23rd.dev/tree/main/registry/shader-metal
+Component: https://21st.dev/@aideathoughts/components/waves-shader
+Author: https://21st.dev/@aideathoughts
