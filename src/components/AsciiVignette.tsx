@@ -36,14 +36,14 @@ export default function AsciiVignette() {
       const radiusY = Math.max(height * 0.54, 300);
 
       const glow = context.createRadialGradient(centerX, centerY, 0, centerX, centerY, radiusX);
-      glow.addColorStop(0, 'rgba(89, 166, 143, 0.065)');
-      glow.addColorStop(0.45, 'rgba(111, 180, 155, 0.025)');
+      glow.addColorStop(0, 'rgba(89, 166, 143, 0.14)');
+      glow.addColorStop(0.45, 'rgba(111, 180, 155, 0.055)');
       glow.addColorStop(1, 'rgba(111, 180, 155, 0)');
       context.fillStyle = glow;
       context.fillRect(0, 0, width, height);
 
       const cell = width < 700 ? 15 : 17;
-      context.font = Math.max(8, Math.round(cell * 0.58)) + 'px ui-monospace, SFMono-Regular, Consolas, monospace';
+      context.font = Math.max(9, Math.round(cell * 0.76)) + 'px ui-monospace, SFMono-Regular, Consolas, monospace';
       context.textAlign = 'center';
       context.textBaseline = 'middle';
 
@@ -59,14 +59,14 @@ export default function AsciiVignette() {
           const distance = horizontal * horizontal + vertical * vertical;
           const bloom = Math.exp(-distance * 2.15);
           const edgeX = Math.min(x / width, 1 - x / width);
-          const vignette = Math.min(1, Math.max(0.12, Math.min(edgeX, edgeY) / 0.19));
+          const vignette = Math.min(1, Math.max(0.22, Math.min(edgeX, edgeY) / 0.19));
           const random = noise(column, row);
           if (random > 0.3 + bloom * 0.68) continue;
 
           const glyphIndex = Math.min(glyphs.length - 1, Math.floor(random * 3 + bloom * 6.5));
           const colorIndex = Math.min(colors.length - 1, Math.floor(random * 1.8 + bloom * 2.4));
           context.fillStyle = 'rgb(' + colors[colorIndex] + ')';
-          context.globalAlpha = (0.012 + bloom * 0.075) * vignette;
+          context.globalAlpha = (0.035 + bloom * 0.2) * vignette;
           context.fillText(glyphs[glyphIndex], x, y);
         }
       }
